@@ -96,6 +96,7 @@ Key Features of type:
 type Status = "success" | "error" | "loading";
 
 let currentStatus: Status = "loading";
+    </code></pre>
 
 2. Intersection:
     <pre><code>
