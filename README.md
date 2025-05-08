@@ -4,7 +4,7 @@
 Interface:  Interface is used to specify the restitution of an object. It defines the structure of a piece of data, which is one or more properties (with types) that an object should have. Interfaces guarantee that you have type safety in your code that is forcing a contract for object structures.
 
 Example:
- interface Person {
+``` interface Person {
   name: string;
   age: number;
 }
@@ -12,7 +12,7 @@ Example:
 const user: Person = {
   name: "Sohag",
   age: 24,
-};
+};```
 
 
 Why Use Interfaces?
