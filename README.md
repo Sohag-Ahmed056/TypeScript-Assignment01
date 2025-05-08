@@ -5,7 +5,7 @@ Interface:  Interface is used to specify the restitution of an object. It define
 
 Example:
 
- <pre><code>```ts interface Person {
+ <pre><code> interface Person {
   name: string;
   age: number;
 }
@@ -13,7 +13,7 @@ Example:
 const user: Person = {
   name: "Sohag",
   age: 24,
-}; ```</code></pre>
+}; </code></pre>
 
 
 Why Use Interfaces?
@@ -33,38 +33,38 @@ Key Features of Interfaces:
 
 
 1.Optional Properties:
-
+ <pre><code>
 interface Person {
   name: string;
   age?: number; // optional
-}
-
+} 
+</code></pre>
 
 2. Read-only Properties:
-
+ <pre><code>
 interface Product {
   readonly id: number;
   name: string;
-}
+} </code></pre>
 
 
 
 
 3.Extending Interfaces:
-
+ <pre><code>
 interface Animal {
   name: string;
 }
 
 interface Dog extends Animal {
   breed: string;
-}
+} </code></pre>
 
 
 
 Types: Type is a keyword for custom types. It works pretty much the same as interface, but more flexibility—primitives, unions, intersections, tuples, and even function signatures are supported with type.
 
-
+ <pre><code>
 type User = {
   name: string;
   age: number;
@@ -74,7 +74,7 @@ const person: User = {
   name: "Sohag",
   age: 24,
 };
-
+</code></pre>
 
 
 
@@ -92,26 +92,28 @@ Why Use type?
 Key Features of type:
 
 1.Union:
-
+ <pre><code>
 type Status = "success" | "error" | "loading";
 
 let currentStatus: Status = "loading";
 
 2. Intersection:
+    <pre><code>
 type A = { a: number };
 type B = { b: string };
 
 type Combined = A & B;
 
 const obj: Combined = { a: 1, b: "text" };
+  </code></pre>
 
 3.Tuple:
-
+ <pre><code>
 type RGB = [number, string, number];
 
 const color: RGB = [255, “sohag”, 0];
 
-
+</code></pre>
 
 
 2.Union and Intersection types in TypeScript
@@ -126,11 +128,12 @@ Union types enable a variable to be one of many types. It's also incredibly usef
 
 
 Example:
+   <pre><code>
 let value: string | number;
 
 value = "Hello";  
 value = 42;       
-value = true;     //  Error: boolean not allowed
+value = true;     //  Error: boolean not allowed </code></pre>
 
 
 What Are Intersection Types (&)?
@@ -139,6 +142,7 @@ Intersection types are used if you want to unite more than one type into one. Th
 
 
 example:
+     <pre><code>
 type User = {
   name: string;
   email: string;
@@ -157,5 +161,5 @@ const admin: AdminUser = {
   role: "admin",
   permissions: ["create", "update", "delete"],
 };
-
+</code></pre>
 
